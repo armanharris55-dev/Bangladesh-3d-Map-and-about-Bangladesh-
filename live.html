@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>বাংলাদেশ লাইভ ম্যাপ - জুম করে গ্রাম পর্যন্ত</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="js/vendor/maplibre/maplibre-gl.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/live.css">
+</head>
+<body>
+  <div id="app">
+    <main id="stage">
+      <div id="map"></div>
+      <header id="toolbar">
+        <div class="brand">🛰️ <b>লাইভ ম্যাপ</b><small>বিভাগ → জেলা → উপজেলা → গ্রাম</small></div>
+        <div class="search">
+          <input id="search" type="search" placeholder="বিভাগ, জেলা বা উপজেলা খুঁজুন" autocomplete="off">
+          <ul id="results" hidden></ul>
+        </div>
+        <div class="btns">
+          <button id="b-style" title="রাস্তা / স্যাটেলাইট">স্যাটেলাইট</button>
+          <button id="b-3d" class="on" title="৩ডি ভূমিরূপ ও ভবন">৩ডি</button>
+          <button id="b-home">বাংলাদেশ</button>
+          <a class="btn" href="index.html">৩ডি মডেল ↗</a>
+        </div>
+      </header>
+      <div id="level">লেভেল: বিভাগ</div>
+      <div id="status" hidden></div>
+      <div id="loading">লাইভ ম্যাপ লোড হচ্ছে…</div>
+    </main>
+    <aside id="panel"><div id="panel-body"></div></aside>
+  </div>
+  <script src="js/vendor/maplibre/maplibre-gl.js"></script>
+  <script src="js/live.js"></script>
+</body>
+</html>

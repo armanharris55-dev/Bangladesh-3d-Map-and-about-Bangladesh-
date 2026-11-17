@@ -1,0 +1,2 @@
+# Sudhu data natun kore banate lagbe (public/data-te toiri file already ache)
+shapely>=2.0

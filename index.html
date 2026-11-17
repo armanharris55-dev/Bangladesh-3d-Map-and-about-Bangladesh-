@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>বাংলাদেশ ৩ডি মানচিত্র - চাকরির প্রস্তুতি</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "./js/vendor/three.module.js" } }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <main id="stage">
+      <canvas id="gl"></canvas>
+
+      <header id="toolbar">
+        <div class="brand">🇧🇩 <b>বাংলাদেশ ৩ডি মানচিত্র</b><small>চাকরির প্রস্তুতি</small></div>
+        <div class="search">
+          <input id="search" type="search" placeholder="বিভাগ বা জেলা খুঁজুন (বাংলা/English)" autocomplete="off">
+          <ul id="results" hidden></ul>
+        </div>
+        <div class="btns">
+          <button id="btn-view" title="উপর থেকে / কোণাকুণি দেখুন">২ডি</button>
+          <button id="btn-districts" class="on" title="জেলার সীমানা দেখান/লুকান">জেলা সীমা</button>
+          <button id="btn-rotate" title="নিজে নিজে ঘুরবে">ঘোরান</button>
+          <button id="btn-reset" title="শুরুর অবস্থানে ফিরুন">রিসেট</button>
+          <button id="btn-quiz" class="accent">কুইজ</button>
+          <a class="btn" href="live.html">🛰️ লাইভ ম্যাপ</a>
+        </div>
+      </header>
+
+      <div id="tip" hidden></div>
+      <div id="hint">মাউস দিয়ে ঘোরান, স্ক্রল করে জুম করুন, বিভাগে ক্লিক করুন</div>
+      <div id="loading">মানচিত্র লোড হচ্ছে…</div>
+    </main>
+
+    <aside id="panel">
+      <div id="panel-body"></div>
+    </aside>
+  </div>
+
+  <div id="quiz" class="modal" hidden>
+    <div class="modal-card">
+      <button id="quiz-close" class="x" aria-label="বন্ধ">✕</button>
+      <div id="quiz-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
